@@ -42,7 +42,11 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.76</version> <!-- 替换为最新版本 -->
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>3.0.0</version>
+        </dependency>
     </dependencies>
 
 </project>
