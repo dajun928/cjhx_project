@@ -1,7 +1,7 @@
 package cn;
 
 
-//import cn.dao.BookDao;
+import cn.dao.BookDao;
 import com.alibaba.fastjson.JSONArray;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,13 +22,13 @@ import java.util.List;
 @SpringBootTest
 class ApplicationTest {
 
-//    @Autowired
-//    private BookDao bookDao;
+    @Autowired
+    private BookDao bookDao;
 
     @Test
     void contextLoad() {
         System.out.println("---------------");
-//        bookDao.save();
+        bookDao.save();
     }
 
 
