@@ -12,6 +12,7 @@
 .settings
 .springBeans
 .sts4-cache
+.class
 
 
 ### IntelliJ IDEA ###
@@ -19,6 +20,7 @@
 *.iws
 *.iml
 *.ipr
+
 
 
 ### NetBeans ###

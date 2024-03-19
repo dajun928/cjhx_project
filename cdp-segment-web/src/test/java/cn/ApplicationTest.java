@@ -1,7 +1,8 @@
 package cn;
 
 
-import cn.dao.BookDao;
+//import cn.dao.BookDao;
+import com.alibaba.fastjson.JSONArray;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,6 +14,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,13 +22,13 @@ import java.util.List;
 @SpringBootTest
 class ApplicationTest {
 
-    @Autowired
-    private BookDao bookDao;
+//    @Autowired
+//    private BookDao bookDao;
 
     @Test
     void contextLoad() {
         System.out.println("---------------");
-        bookDao.save();
+//        bookDao.save();
     }
 
 
@@ -100,5 +102,23 @@ class ApplicationTest {
 
     }
 
+    @Test
+    void contextLoad4() {
+        System.out.println("---------------");
+        String filePath="E:\\workspace\\develop\\javaCodes\\cjhx_project\\cdp-segment-web\\src\\main\\resources\\example.json";
+        try {
+            String content=new String(Files.readAllBytes(Paths.get(filePath)));
+            List<JSONObject> res = new ArrayList<>();
+            JSONArray json = JSONArray.parseArray(content);
+            for(int i = 0; i < json.size(); i++) {
+                res.add(json.getJSONObject(i));
+            }
+            System.out.println(res);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
 }
