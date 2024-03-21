@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>cdp-segment-web</module>
+        <module>mdc-big-data</module>
     </modules>
 
 

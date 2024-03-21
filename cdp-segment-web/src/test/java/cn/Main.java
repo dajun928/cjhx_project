@@ -1,8 +1,8 @@
 package cn;
 public class Main {
     public static void main(String[] args) {
-        String str = "YourStringHere";
-//        String str = "YourStr12121212121221ingHere";
+//        String str = "YourStringHere";
+        String str = "3M533423432";
         long hashedValue = generate19DigitLong(str);
         System.out.println("Generated 19-digit long value from \"" + str + "\": " + hashedValue);
     }
