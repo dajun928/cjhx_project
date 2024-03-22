@@ -8,7 +8,7 @@ object SparkOnHive extends App {
   val spark = SparkSession
     .builder()
     .appName("Spark Hive Example")
-    .master("local[1]")
+    .master("local[*]")
     .enableHiveSupport()
     .getOrCreate()
 
@@ -16,7 +16,7 @@ object SparkOnHive extends App {
   import spark.sql
 
   sql("CREATE TABLE IF NOT EXISTS src (key INT, value STRING)").show()
-  sql("LOAD DATA LOCAL INPATH 'oneid_graphx/src/main/resources/kv1.txt' INTO TABLE src").show
+  sql("LOAD DATA LOCAL INPATH 'mdc-big-data/src/main/resources/kv1.txt' INTO TABLE src").show
   sql("SELECT * FROM src").show()
 }
 
