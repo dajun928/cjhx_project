@@ -1,3 +1,5 @@
+package hive
+
 
 import org.apache.spark.sql.SparkSession
 
@@ -12,7 +14,6 @@ object SparkOnHive extends App {
     .enableHiveSupport()
     .getOrCreate()
 
-  import spark.implicits._
   import spark.sql
 
   sql("CREATE TABLE IF NOT EXISTS src (key INT, value STRING)").show()
